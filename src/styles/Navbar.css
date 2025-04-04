@@ -1,0 +1,310 @@
+:root {
+    --primary-green: #2e7d32;
+    --secondary-green: #81c784;
+    --light-green: #e8f5e9;
+    --dark-green: #1b5e20;
+    --accent-blue: #0288d1;
+    --white: #ffffff;
+    --text-dark: #263238;
+    --text-light: #eceff1;
+    --gray-bg: #f5f5f5;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Base Navbar Styles */
+  .navbar {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-dark);
+  }
+  
+  .logo-icon {
+    font-size: 1.8rem;
+    margin-right: 0.8rem;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--dark-green);
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .nav-item {
+    position: relative;
+    margin: 0 1rem;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-item:hover a {
+    color: var(--primary-green);
+  }
+  
+  .nav-indicator {
+    height: 3px;
+    width: 0;
+    background-color: var(--primary-green);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-item:hover .nav-indicator,
+  .nav-item.active .nav-indicator {
+    width: 100%;
+  }
+  
+  .nav-item.active a {
+    color: var(--primary-green);
+    font-weight: 600;
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .login-btn {
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+  }
+  
+  .login-btn:hover {
+    background-color: var(--light-green);
+  }
+  
+  .signup-btn {
+    background-color: var(--primary-green);
+    color: var(--white);
+  }
+  
+  .signup-btn:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+  }
+  
+  /* Desktop Navigation Specific Styles */
+  .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Mobile Navigation Specific Styles */
+  .mobile-nav {
+    display: none;
+  }
+  
+  .mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    padding: 0.5rem;
+  }
+  
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .mobile-menu.open {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+  
+  .mobile-menu .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+  
+  .mobile-menu .nav-item {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  
+  .mobile-menu .nav-item a {
+    display: block;
+    padding: 0.8rem 0;
+  }
+  
+  .mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .mobile-actions .nav-button {
+    width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .desktop-nav {
+      display: none;
+    }
+  
+    .mobile-nav {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 993px) {
+    .mobile-nav {
+      display: none;
+    }
+  }
+
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .logout-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .logout-btn:hover {
+    background: #cc0000;
+  }
+  /* lllllllllllllllllllllllllllllll */
+
+  /* Add these to your existing Navbar.css */
+
+.user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  min-width: 150px;
+  z-index: 1001;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 10px 15px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: var(--light-green);
+  color: var(--primary-green);
+}
+
+/* For mobile, keep the existing logout button style */
+.mobile-nav .user-profile {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.mobile-nav .profile-dropdown {
+  position: static;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+ .user-profile{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 20px;
+ }
+ .logout-btn{
+  width: 100% !important;
+ }
+}

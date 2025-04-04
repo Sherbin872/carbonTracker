@@ -1,0 +1,166 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87vh;
+    overflow: hidden !important;
+    background-color: var(--light-green);
+    padding: 20px;
+  }
+  
+  .register-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .register-title {
+    color: var(--dark-green);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .register-input {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+  }
+  
+  .register-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+  }
+  
+  .register-button {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.3rem;
+  }
+  
+  .register-button:hover {
+    background-color: var(--dark-green);
+  }
+  
+  .social-register {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 1.2rem 0;
+  }
+  
+  .login-link {
+    text-align: center;
+    color: var(--text-dark);
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .login-link a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Shared styles (same as login.css) */
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0.5rem;
+  }
+  
+  .social-button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+  }
+  
+  .social-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-icon {
+    font-size: 1.1rem;
+  }
+  
+  .google {
+    background-color: #4285F4;
+    color: white;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+    color: white;
+  }
+  /* Add to your existing Register.css */
+.error-message {
+    color: #d32f2f;
+    background-color: #fdecea;
+    padding: 0.7rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  /* Add password strength indicator if you want */
+  .password-strength {
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-dark);
+  }
+  
+  .password-strength.weak {
+    color: #d32f2f;
+  }
+  
+  .password-strength.medium {
+    color: #ffa000;
+  }
+  
+  .password-strength.strong {
+    color: var(--primary-green);
+  }
