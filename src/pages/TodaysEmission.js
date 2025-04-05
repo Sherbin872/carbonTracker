@@ -282,7 +282,7 @@ const TodaysEmission = () => {
                   className="add-first-activity"
                   onClick={() => setModalOpen(true)}
                 >
-                  <FaPlus /> Add your first activity
+                  <FaPlus /> Add your today's activity
                 </button>
               </div>
             )}
