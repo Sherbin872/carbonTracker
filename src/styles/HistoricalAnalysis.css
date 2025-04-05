@@ -219,6 +219,7 @@
   /* Add to your HistoricalAnalysis.css */
 
 .header-controls {
+  margin-bottom: 20px;
   display: flex;
   gap: 12px;
   align-items: center;
